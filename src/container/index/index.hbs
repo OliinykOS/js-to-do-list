@@ -4,8 +4,30 @@
 }}
 
 <main>
-	{{>heading title="Index" info=data.test}}
+	<div class="card">
+        <h1 class="card__title">To-Do list</h1>
+        <div class="add">
+            <input class="add__input" type="text" placeholder="Введіть задачу...">
+            <button class="add__button">Додати</button>
+        </div>
+        <div class="card__list">
+            
+        </div>
+    </div>
 </main>
+
+<template id="task">
+    <div class="item">
+        <span class="item__number">1.</span>
+        <div class="item__text">Зробити щось</div>
+        <button class="item__button button_do">
+            
+        </button>
+        <button class="item__button button_delete">
+           
+        </button>
+    </div>
+</template>
 
 {{!
     Цей код містить лише те, що буде виводитись в <body>

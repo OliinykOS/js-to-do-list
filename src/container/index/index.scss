@@ -1,7 +1,110 @@
 @use '../../style' as s;
 
 main {
-	background: s.color(dark);
-	color: s.color(light);
-	padding: s.space(4);
+	
 } 
+
+.card{
+	display: flex;
+	flex-direction: column;
+	gap: s.space(6);
+
+	width: 720px;
+	padding: s.space(6);
+
+	border-radius: 12px;
+	background: #FFF;
+
+	box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.10);
+
+	&__title{
+		font-size: 24px;
+		color: #212529;
+	}
+
+	&__list{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.add{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 12px;
+
+	&__input{
+		display: flex;
+		padding: 12px 16px;
+		align-items: center;
+		flex: 1 0 0;
+		align-self: stretch;
+		border-radius: 4px;
+		border: 1px solid #CED4DA;
+		font-size: 14px;
+		color: #212529;
+	}
+
+	&__button{
+		display: flex;
+		width: 100px;
+		height: 38px;
+		padding: 4px;
+		border-radius: 4px;
+		border: 1px solid #0D6EFD;
+		background: #0D6EFD;
+		color: #FFF;
+		font-size: 16px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		transition: opacity 0.7s;
+
+		&:hover{
+			opacity: 0.5;
+		}
+	}
+}
+
+.item{
+	display: flex;
+	gap: s.space(2);
+	padding: s.space(3) 0;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid gray;
+	
+	&__text{
+		width: 100%;
+		font-size: 16px;
+		line-height: 150%;
+		color: #212529;
+		justify-self: flex-start;
+	}
+
+	&__button{
+		width: 34px;
+		height: 29px;
+		transition: opacity 0.7s;
+
+		&:hover{
+			opacity: 0.5;
+		}
+	}
+}
+
+.item_done{
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.button_do{
+	background-image: url('/svg/do_button.svg');
+}
+.button_done{
+	background-image: url('/svg/done_button.svg');
+}
+.button_delete{
+	background-image: url('/svg/delete_button.svg');
+}
